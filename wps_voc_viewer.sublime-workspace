@@ -1,0 +1,293 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 475.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path();urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ikaret/MyProject/js/WPS_VOC_Viewer",
+		"/Users/ikaret/MyProject/js/WPS_VOC_Viewer/02_voc"
+	],
+	"file_history":
+	[
+		"/Users/ikaret/MyProject/js/WPS_VOC_Viewer/02_9834_wps.txt",
+		"/Users/ikaret/MyProject/js/wps_voc_viewer/02_voc/temp2.txt",
+		"/Users/ikaret/MyProject/js/WPS_VOC_Viewer/viewer.html",
+		"/Users/ikaret/MyProject/js/WPS_VOC_Viewer/temp2.txt",
+		"/Users/ikaret/MyProject/python/Parser/result/result_20161025.sql",
+		"/Users/ikaret/MyProject/python/Parser/generator.py",
+		"/Users/ikaret/MyProject/python/Parser/PPAS",
+		"/Users/ikaret/MyProject/python/Parser/parser3.py",
+		"/Users/ikaret/MyProject/python/Parser/Wing_temp/20161017_0_ALL_AP.DAT",
+		"/Users/ikaret/MyProject/python/Parser/result/sub.txt",
+		"/Users/ikaret/MyProject/python/Parser/WiNG_data_20161017/20161017_0_ALL_AP.DAT",
+		"/Users/ikaret/MyProject/python/Parser/read_file.py",
+		"/Users/ikaret/MyProject/python/Parser/result/temp.DAT",
+		"/Users/ikaret/MyProject/python/Parser/parser4_scan.py",
+		"/Users/ikaret/MyProject/python/Parser/temp_WiNG_data/20161017_1_ALL_AP.DAT",
+		"/Users/ikaret/MyProject/python/Parser/result/result.sql",
+		"/Users/ikaret/MyProject/python/Parser/parser.py",
+		"/Users/ikaret/MyProject/python/Parser/WiNG_data/20161017_12_ALL_AP.DAT",
+		"/Users/ikaret/MyProject/python/Parser/WiNG_data/20161017_11_ALL_AP.DAT",
+		"/Users/ikaret/MyProject/python/Parser/WiNG_data/20161017_10_ALL_AP.DAT",
+		"/Users/ikaret/MyProject/python/Parser/WiNG_data/20161017_0_ALL_AP.DAT",
+		"/Users/ikaret/MyProject/python/Parser/temp.py",
+		"/Users/ikaret/MyProject/python/Parser/Data/wing_20161020_001_new.sql",
+		"/Users/ikaret/MyProject/python/Parser/Data/wing_20161020_001.sql",
+		"/Users/ikaret/MyProject/python/Parser/parser2.py",
+		"/Users/ikaret/MyProject/python/Parser/Readme.txt",
+		"/Users/ikaret/MyProject/python/Parser/Data/text.txt",
+		"/Users/ikaret/MyProject/python/Parser/Data/wing_20161020_043..sql",
+		"/Users/ikaret/Downloads/wing_20161020_001..sql",
+		"/Users/ikaret/Downloads/wing_20161020_043..sql",
+		"/Users/ikaret/MyProject/python/byte_of_python/for.py",
+		"/Users/ikaret/MyProject/python/Parser/20161017_0_ALL_AP.DAT",
+		"/Users/ikaret/Downloads/view.jade",
+		"/Users/ikaret/MyProject/python/byte_of_python/Class/oop2_objvar.py",
+		"/Users/ikaret/MyProject/python/byte_of_python/Class/myRobot.py",
+		"/Users/ikaret/MyProject/python/byte_of_python/DataStructure/ds_using_list.py",
+		"/Users/ikaret/MyProject/python/byte_of_python/Function/function1.py",
+		"/Users/ikaret/MyProject/python/byte_of_python/Module/module_using_name.py",
+		"/Users/ikaret/MyProject/python/byte_of_python/function/function_docstring.py",
+		"/Users/ikaret/MyProject/python/byte_of_python/helloworld.py",
+		"/Users/ikaret/MyProject/python/byte_of_python/var.py",
+		"/Users/ikaret/MyProject/js/server_side_javascript/hello.js",
+		"/Users/ikaret/MyProject/js/server_side_javascript/webserver.js",
+		"/Users/ikaret/MyProject/wps/loc_ms/ms_main.c",
+		"/Users/ikaret/MyProject/wps/lib/libWpsAlgorithm/wps_algo_process.c",
+		"/Users/ikaret/MyProject/java/Helloworld.java",
+		"/Users/ikaret/MyProject/wps/loc_ms/ms.h",
+		"/Users/ikaret/MyProject/wps/loc_ms/ms_mem.c",
+		"/Users/ikaret/MyProject/wps/loc_ms/ms_thr.c",
+		"/Users/ikaret/MyProject/CM_academy/mail/Mail.class.php",
+		"/Users/ikaret/MyProject/python/WebCwarler/webCrawler.py",
+		"/Users/ikaret/MyProject/java/OpenTutorial/Condition1Demo.java",
+		"/Users/ikaret/MyProject/java/OpenTutorial/ConcatDemo.java",
+		"/Users/ikaret/MyProject/java/OpenTutorial/ArithmeticDemo.java",
+		"/Users/ikaret/MyProject/python/WebCwarler/result",
+		"/Users/ikaret/MyProject/test.py",
+		"/Users/ikaret/Library/Application Support/Sublime Text 3/Packages/User/JavaC.sublime-build",
+		"/Users/ikaret/MyProject/sorting.py",
+		"/Users/ikaret/MyProject/CM_academy/xe/modules/page/skins/theFrame_pSkin_main01/skin.xml",
+		"/Users/ikaret/MyProject/CM_academy/xe/modules/page/skins/theFrame_pSkin_main01/content.html",
+		"/Users/ikaret/MyProject/CM_academy/xe/widgets/contactfree/skins/default/contact.html",
+		"/Users/ikaret/MyProject/CM_academy/xe/widgets/contactfree/skins/default/js/contact.js",
+		"/Users/ikaret/MyProject/CM_academy/xe/widgets/contactfree/skins/default/css/default.css",
+		"/Users/ikaret/Downloads/startbootstrap-landing-page-1.0.5/css/bootstrap.min.css",
+		"/Volumes/ikaret.iptime.org-1/layouts/theFrame/layout.html",
+		"/Users/ikaret/Desktop/user.html",
+		"/Users/ikaret/MyProject/wps/lib/libComm/ipc_shm.c",
+		"/Users/ikaret/test.txt",
+		"/Users/ikaret/test.html",
+		"/Users/ikaret/MyProject/wps/lib/libComm/ipc_msg.c",
+		"/Users/ikaret/MyProject/wps/lib/libWpsDesCrypto/wps_crypto.c",
+		"/Users/ikaret/MyProject/wps/lib/libWpsAlgorithm/wps_algo_db.lis",
+		"/Users/ikaret/MyProject/wps/lib/libWpsAlgorithm/wps_algo_db.c",
+		"/Users/ikaret/untitled.py",
+		"/Users/ikaret/MyProject/Algorithms_in_python/Sorting/Temp/sorting.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/ikaret/MyProject/CM_academy"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"f8:0c:f3:bc:96:d0",
+			"\\x",
+			"\\",
+			"\\x",
+			"ba:5a:73:18:85:a3",
+			"__main__",
+			"1463899116007"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 153.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "wps_voc_viewer.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 288.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

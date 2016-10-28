@@ -35,7 +35,7 @@
         map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
 
         map.onEvent('file_reload', function (event, payload) {
-          alert(payload[27].latitude);
+          //alert(payload[27].latitude);
           
           for (i = 0; i < payload.length; i++) {
             var marker = new olleh.maps.overlay.Marker({
