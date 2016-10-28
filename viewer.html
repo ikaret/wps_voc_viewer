@@ -35,8 +35,15 @@
         map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
 
         map.onEvent('file_reload', function (event, payload) {
-          //alert(payload[27].latitude);
           
+
+          //payload[0]은 기지국정보
+          initPosition = new olleh.maps.LatLng(payload[0].latitude,payload[0].longitude);
+          this.setCenter(initPosition);
+          alert(initPosition);
+
+          
+          //payload[1]부터는 ap 정보
           for (i = 0; i < payload.length; i++) {
             var marker = new olleh.maps.overlay.Marker({
               position: new olleh.maps.LatLng(payload[i].latitude,payload[i].longitude),
