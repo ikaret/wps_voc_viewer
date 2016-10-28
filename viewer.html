@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>WPS VOC Viewer</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+      <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map_div { height: 100% }
+        pre {
+          padding: 1em;
+          background: rgb(240, 240, 240);
+          color: rgb(0, 0, 0);
+          border-radius: .5em;
+        }
+      </style>
+      <script type="text/javascript" 
+      src="http://api.ktgis.com:10080/v3/olleh/mapAPI.js?key=T2xsZWhNYXBBUEkwMDA0OnZUMVM0TnFWZGk=">
+      </script>
+
+      <script type="text/javascript">
+      var map;
+
+      function initialize() {
+        var marker, leafMarker;
+        
+        var initPosition = new olleh.maps.UTMK(957985.70, 1944917.52);
+
+        var mapOpts = {
+          center: initPosition,
+          mapTypeId: 'ROADMAP',
+          zoom: 9
+        };
+        map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
+
+        map.onEvent('file_reload', function (event, payload) {
+          alert(payload[27].latitude);
+          
+          for (i = 0; i < payload.length; i++) {
+            var marker = new olleh.maps.overlay.Marker({
+              position: new olleh.maps.LatLng(payload[i].latitude,payload[i].longitude),
+              map: this
+            });
+          };
+          
+          this.setCenter(new olleh.maps.UTMK(957985.70, 1944917.52));
+        });
+      };
+      </script>
+    </head>
+    <body onload="initialize()">
+      <input type="file" id="getfile" accept="text/*">
+      <div id="map_div"></div>
+      <script>
+        var file = document.querySelector('#getfile');
+        file.onchange = function () {
+          var fileReloadEvent = new olleh.maps.event.Event('file_reload',map);
+          var fileList = file.files ;
+
+          // 읽기
+          var reader = new FileReader();
+          reader.readAsText(fileList [0]);
+
+
+
+          //로드 한 후
+          reader.onload = function(){
+            //줄별로 split
+            var result = [];
+            var lines = reader.result.split("\n");
+            for (i = 0; i < lines.length; i++) {
+              var line = lines[i];
+              result[i] = {
+                updatetime:line.split(",")[0],
+                longitude:line.split(",")[1],
+                latitude:line.split(",")[2],
+                ssid:line.split(",")[3],
+                mac:line.split(",")[4],
+                type:line.split(",")[5]
+              };
+            }
+            //alert(result[27].latitude);
+            map.fireEvent(fileReloadEvent,result);
+            //alert(reader.result.split("\n").length);
+          };
+          
+          //function  () {
+            //document.querySelector('#preview').textContent = reader.result ;
+          //};
+        };
+      </script>
+
+    </body>
+</html>
