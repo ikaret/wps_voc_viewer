@@ -34,6 +34,28 @@
         };
         map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
 
+        //info window template
+        var tmpl = '<div style="font-family: dotum, arial, sans-serif;font-size: 18px; font-weight: bold;margin-bottom: 5px;">#{ssid}</div>' +
+                  '<table style="border-spacing: 2px; border: 0px"><tbody><tr>' +
+                  '<tr><td style="color:#767676;padding-right:12px">MAC Address</td>' +
+                  '<td><span>#{mac}</span></td></tr>' +
+                  '<tr><td style="color:#767676;padding-right:12px">LatLng</td>' +
+                  '<td><span>#{latitude}, #{longitude}</span></td></tr>' +
+                  '<tr><td style="color:#767676;padding-right:12px">Update Time</td>' +
+                  '<td><span>#{updatetime}</span></td></tr>' +
+                  '<tr><td style="color:#767676;padding-right:12px">Data Type</td>' +
+                  '<td><span>#{type}</span></td></tr>' +
+                  '</tr></tbody></table>';
+
+        //info window 생성
+        var info = new olleh.maps.overlay.InfoWindow({
+          maxWidth: 400,
+          position: initPosition,
+          content: '',
+          map:map,
+          visible: false
+        });
+
         map.onEvent('file_reload', function (event, payload) {
 
           //Mac 개수 확인 및 Mac 종류별 Icon 셋팅
@@ -68,8 +90,21 @@
           });
           
           
+          
           //payload[1]부터는 ap 정보
           for (i = 1; i < payload.length; i++) {
+
+            var data = {
+              ssid: payload[i].ssid,
+              mac: payload[i].mac,
+              latitude: payload[i].latitude,
+              longitude: payload[i].longitude,
+              updatetime: payload[i].updatetime,
+              type: payload[i].type
+            };
+
+
+
             var marker = new olleh.maps.overlay.Marker({
               position: new olleh.maps.LatLng(payload[i].latitude,payload[i].longitude),
               icon: {
@@ -80,9 +115,20 @@
               },
               map: this
             });
+            marker.data = data;
+
+            //클릭할때 info window visible
+            marker.onEvent('click', function (event, payload) {
+              info.setMap(map)
+              info.setContent(olleh.maps.util.applyTemplate(tmpl, this.data));
+              info.setPosition(this.getPosition());
+              info.setVisible(true);
+              info.setPixelOffset(new olleh.maps.Point(0,-25));
+            },marker);
           };
 
         });
+
       };
       </script>
     </head>
@@ -117,14 +163,9 @@
                 type:line.split(",")[5]
               };
             }
-            //alert(result[27].latitude);
             map.fireEvent(fileReloadEvent,result);
-            //alert(reader.result.split("\n").length);
           };
           
-          //function  () {
-            //document.querySelector('#preview').textContent = reader.result ;
-          //};
         };
       </script>
 
