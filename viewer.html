@@ -30,7 +30,7 @@
         var mapOpts = {
           center: initPosition,
           mapTypeId: 'ROADMAP',
-          zoom: 9
+          zoom: 8
         };
         map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
 
@@ -40,18 +40,26 @@
           //payload[0]은 기지국정보
           initPosition = new olleh.maps.LatLng(payload[0].latitude,payload[0].longitude);
           this.setCenter(initPosition);
-          alert(initPosition);
+          var circle = new olleh.maps.vector.Circle({
+            map: this,
+            center: initPosition,
+            radius: 2500,
+            strokeColor: 'green',
+            strokeOpacity: 0.2,
+            strokeWeight: 0,
+            fillColor: 'green',
+            fillOpacity: 0.2
+          });
 
           
           //payload[1]부터는 ap 정보
-          for (i = 0; i < payload.length; i++) {
+          for (i = 1; i < payload.length; i++) {
             var marker = new olleh.maps.overlay.Marker({
               position: new olleh.maps.LatLng(payload[i].latitude,payload[i].longitude),
               map: this
             });
           };
-          
-          this.setCenter(new olleh.maps.UTMK(957985.70, 1944917.52));
+
         });
       };
       </script>
