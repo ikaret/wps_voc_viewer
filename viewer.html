@@ -35,7 +35,27 @@
         map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
 
         map.onEvent('file_reload', function (event, payload) {
-          
+
+          //Mac 개수 확인 및 Mac 종류별 Icon 셋팅
+          var mac_idx = [];
+          for (i = 1; i < payload.length; i++) {
+            if (mac_idx.indexOf(payload[i].mac) < 0)
+              mac_idx.push(payload[i].mac);
+          };
+
+          //Icon Mapping table
+          var icon_idx = {
+            0: 'images/01.png',            1: 'images/02.png',            2: 'images/03.png',            3: 'images/04.png',            4: 'images/05.png',            5: 'images/06.png',
+            6: 'images/07.png',            7: 'images/08.png',            8: 'images/09.png',            9: 'images/10.png',           10: 'images/11.png',           11: 'images/12.png',
+            12: 'images/13.png',          13: 'images/14.png',           14: 'images/15.png',           15: 'images/16.png',           16: 'images/17.png',           17: 'images/18.png',
+            18: 'images/19.png',          19: 'images/20.png',           20: 'images/21.png',           21: 'images/22.png',           22: 'images/23.png',           23: 'images/01.png',
+            24: 'images/02.png',          25: 'images/03.png',           26: 'images/04.png',           27: 'images/05.png',           28: 'images/06.png',           29: 'images/07.png',
+            30: 'images/08.png',          31: 'images/09.png'            
+          };
+
+          alert(icon_idx[mac_idx.indexOf(payload[1].mac)]);
+          //alert(icon_idx[mac_idx.indexof('00271ce2ee93')]);
+
 
           //payload[0]은 기지국정보
           initPosition = new olleh.maps.LatLng(payload[0].latitude,payload[0].longitude);
@@ -58,7 +78,7 @@
               position: new olleh.maps.LatLng(payload[i].latitude,payload[i].longitude),
               icon: {
                 //url: 'http://api.ktgis.com:10080/ollehmap/resource/v3/img/leaf-red.png',
-                url: 'images/02.png',
+                url: icon_idx[mac_idx.indexOf(payload[i].mac)],
                 size: new olleh.maps.Size(30, 30),
                 
               },
