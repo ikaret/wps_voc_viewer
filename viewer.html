@@ -45,17 +45,23 @@
             center: initPosition,
             radius: 2500,
             strokeColor: 'green',
-            strokeOpacity: 0.2,
-            strokeWeight: 0,
+            strokeOpacity: 0.4,
+            strokeWeight: 1,
             fillColor: 'green',
             fillOpacity: 0.2
           });
-
+          
           
           //payload[1]부터는 ap 정보
           for (i = 1; i < payload.length; i++) {
             var marker = new olleh.maps.overlay.Marker({
               position: new olleh.maps.LatLng(payload[i].latitude,payload[i].longitude),
+              icon: {
+                //url: 'http://api.ktgis.com:10080/ollehmap/resource/v3/img/leaf-red.png',
+                url: 'images/02.png',
+                size: new olleh.maps.Size(30, 30),
+                
+              },
               map: this
             });
           };
