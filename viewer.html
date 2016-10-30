@@ -53,10 +53,6 @@
             30: 'images/08.png',          31: 'images/09.png'            
           };
 
-          alert(icon_idx[mac_idx.indexOf(payload[1].mac)]);
-          //alert(icon_idx[mac_idx.indexof('00271ce2ee93')]);
-
-
           //payload[0]은 기지국정보
           initPosition = new olleh.maps.LatLng(payload[0].latitude,payload[0].longitude);
           this.setCenter(initPosition);
