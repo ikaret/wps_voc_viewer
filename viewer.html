@@ -102,17 +102,27 @@
               updatetime: payload[i].updatetime,
               type: payload[i].type
             };
+            var WiNG_icon = olleh.maps.overlay.Marker.DEFAULT_ICON;
+
+            if (payload[i].type != 'I '){
+              WiNG_icon = {
+                url: icon_idx[mac_idx.indexOf(payload[i].mac)],
+                size: new olleh.maps.Size(30,30)
+              }
+            }
 
 
 
             var marker = new olleh.maps.overlay.Marker({
               position: new olleh.maps.LatLng(payload[i].latitude,payload[i].longitude),
-              icon: {
+              icon: WiNG_icon,
+              /*{
                 //url: 'http://api.ktgis.com:10080/ollehmap/resource/v3/img/leaf-red.png',
-                url: icon_idx[mac_idx.indexOf(payload[i].mac)],
+                //url: WiNG_icon,
+                url : icon_idx[mac_idx.indexOf(payload[i].mac)],
                 size: new olleh.maps.Size(30, 30),
                 
-              },
+              },*/
               map: this
             });
             marker.data = data;
@@ -125,6 +135,7 @@
               info.setVisible(true);
               info.setPixelOffset(new olleh.maps.Point(0,-25));
             },marker);
+            
           };
 
         });
