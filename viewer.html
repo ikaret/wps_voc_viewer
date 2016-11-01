@@ -104,7 +104,7 @@
             };
             var WiNG_icon = olleh.maps.overlay.Marker.DEFAULT_ICON;
 
-            if (payload[i].type != 'I '){
+            if (payload[i].type != 'I'){
               WiNG_icon = {
                 url: icon_idx[mac_idx.indexOf(payload[i].mac)],
                 size: new olleh.maps.Size(30,30)
@@ -166,12 +166,12 @@
             for (i = 0; i < lines.length; i++) {
               var line = lines[i];
               result[i] = {
-                updatetime:line.split(",")[0],
-                longitude:line.split(",")[1],
-                latitude:line.split(",")[2],
+                updatetime:line.split(",")[0].replace(/\s/gi, ''),
+                longitude:line.split(",")[1].replace(/\s/gi, ''),
+                latitude:line.split(",")[2].replace(/\s/gi, ''),
                 ssid:line.split(",")[3],
-                mac:line.split(",")[4],
-                type:line.split(",")[5]
+                mac:line.split(",")[4].replace(/\s/gi, ''),
+                type:line.split(",")[5].replace(/\s/gi, '')
               };
             }
             map.fireEvent(fileReloadEvent,result);
