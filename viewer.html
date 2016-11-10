@@ -58,6 +58,8 @@
 
         map.onEvent('file_reload', function (event, payload) {
 
+          map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
+
           //Mac 개수 확인 및 Mac 종류별 Icon 셋팅
           var mac_idx = [];
           for (i = 1; i < payload.length; i++) {
@@ -149,6 +151,8 @@
       <script>
         var file = document.querySelector('#getfile');
         file.onchange = function () {
+          initialize();
+
           var fileReloadEvent = new olleh.maps.event.Event('file_reload',map);
           var fileList = file.files ;
 
